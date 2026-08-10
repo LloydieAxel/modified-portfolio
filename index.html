@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Portfolio | Lloyd Axel N. Aquende</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- External Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 1. Navigation Bar -->
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><button id="theme-toggle-btn" class="nav-theme-btn" onclick="toggleTheme()">🌙 Dark Mode</button></li>
+        </ul>
+    </nav>
+
+    <div class="portfolio-container" id="home">
+
+        <!-- 2. Header Section -->
+        <header>
+            <img class="profile-pic" src="1000009485.jpg" alt="Student Photo">
+            <h1>Lloyd Axel N. Aquende</h1>
+            <p class="subtitle">Aspiring Full-Stack Developer & Tech Enthusiast</p>
+            <div class="header-info">
+                <p><strong>Course:</strong> BS Information Technology</p>
+                <p><strong>School:</strong> FAITH Colleges</p>
+                <p><strong>Email:</strong> s2024100095@firstasia.edu.ph</p>
+            </div>
+
+            <!-- Live Date & Clock (JS Requirement) -->
+            <div class="datetime-box">
+                <p id="current-date">Loading date...</p>
+                <p id="live-clock">00:00:00</p>
+            </div>
+
+            <!-- Random Motivational Quote (JS Requirement) -->
+            <div class="quote-box">
+                <p id="quote-display">Loading today's inspiration...</p>
+            </div>
+        </header>
+
+        <!-- 3. About Me Section -->
+        <section id="about" class="about-section">
+            <h2>About Me</h2>
+            <p class="about-text" id="about-text">
+                Hello! I am an aspiring Information Technology student passionate about web development, software building, and solving complex real-world problems through code. My main interest lies in front-end development, where I enjoy turning ideas into functional digital solutions. My goal is to secure a software engineering internship where I can contribute to meaningful projects, expand my practical technical skillset, and collaborate with experienced developers in the tech industry.
+            </p>
+            <button id="about-toggle-btn" class="small-btn" onclick="toggleAbout()">Hide About Me</button>
+        </section>
+
+        <!-- 4. Educational Background Section -->
+        <section id="education">
+            <h2>Educational Background</h2>
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Level</th>
+                            <th>School</th>
+                            <th>Year</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Elementary</td>
+                            <td>Sta. Anastacia, San Rafael Elementary School</td>
+                            <td>2012</td>
+                        </tr>
+                        <tr>
+                            <td>High School</td>
+                            <td>Sta. Anastacia, San Rafael National High School</td>
+                            <td>2018</td>
+                        </tr>
+                        <tr>
+                            <td>College</td>
+                            <td>FAITH Colleges</td>
+                            <td>Present</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- 5. Skills Section (Card Layout) -->
+        <section id="skills">
+            <h2>Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>HTML & CSS</h3>
+                    <p>Intermediate</p>
+                </div>
+                <div class="skill-card">
+                    <h3>JavaScript</h3>
+                    <p>Beginner</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Microsoft Word</h3>
+                    <p>Advanced</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Communication</h3>
+                    <p>Advanced</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Teamwork</h3>
+                    <p>Advanced</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Problem Solving</h3>
+                    <p>Intermediate</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Programming Languages to Learn -->
+        <section>
+            <h2>Programming Languages to Learn</h2>
+            <ol class="learn-list">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>PHP</li>
+                <li>JAVA</li>
+            </ol>
+        </section>
+
+        <!-- Favorite Websites -->
+        <section>
+            <h2>Favorite Websites</h2>
+            <ul class="links-list">
+                <li><a href="https://www.google.com" target="_blank" rel="noopener noreferrer">Google</a></li>
+                <li><a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">YouTube</a></li>
+                <li><a href="https://github.com/LloydieAxel" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+            </ul>
+        </section>
+
+        <!-- 6. Gallery Section (was empty - now populated) -->
+        <section id="gallery">
+            <h2>Gallery</h2>
+            <div class="image-gallery">
+                <img src="https://picsum.photos/seed/aquende-code/400/300" alt="Coding workspace">
+                <img src="https://picsum.photos/seed/aquende-laptop/400/300" alt="Laptop with development environment">
+                <img src="https://picsum.photos/seed/aquende-team/400/300" alt="Team collaboration on a project">
+                <img src="https://picsum.photos/seed/aquende-campus/400/300" alt="FAITH Colleges campus life">
+            </div>
+        </section>
+
+        <!-- 7. Button Click Counter (JS Requirement) -->
+        <section id="counter-section">
+            <h2>Interaction Counter</h2>
+            <button class="counter-btn" onclick="incrementCounter()">Click Me</button>
+            <p id="click-counter-display">Button clicked 0 times</p>
+        </section>
+
+        <!-- 8. Contact Form -->
+        <section id="contact">
+            <h2>Contact Form</h2>
+            <form id="contact-form" action="#" method="post" onsubmit="return validateForm(event)">
+                <div class="form-group">
+                    <label for="fullname">Full Name</label>
+                    <input type="text" id="fullname" name="fullname" placeholder="Enter your full name">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email address">
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Write your message here..."></textarea>
+                </div>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+
+        <!-- 9. Footer -->
+        <footer>
+            <p>&copy; 2026 Lloyd Axel Aquende | BS Information Technology</p>
+        </footer>
+
+    </div>
+
+    <!-- External JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
