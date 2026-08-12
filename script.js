@@ -1,17 +1,11 @@
-/* =========================================================
-   INTERACTIVE STUDENT PROFILE - JAVASCRIPT FEATURES
-   ========================================================= */
-
-// Run everything once the page has fully loaded
 window.addEventListener("DOMContentLoaded", () => {
-  showWelcomeMessage();   // 1. Welcome message using prompt()
-  displayCurrentDate();   // 2. Current date
-  updateClock();          // 3. Live digital clock (first run)
-  setInterval(updateClock, 1000); // keep clock ticking every second
-  showRandomQuote();      // Homework: random motivational quote
+  showWelcomeMessage();   
+  displayCurrentDate();   
+  updateClock();          
+  setInterval(updateClock, 1000); 
+  showRandomQuote();      
 });
 
-/* ============ 1. Welcome Message (prompt) ============ */
 function showWelcomeMessage() {
   let userName = prompt("Please enter your name:");
 
@@ -22,7 +16,6 @@ function showWelcomeMessage() {
   }
 }
 
-/* ============ 2. Current Date ============ */
 function displayCurrentDate() {
   const dateElement = document.getElementById("current-date");
   const today = new Date();
@@ -30,7 +23,6 @@ function displayCurrentDate() {
   dateElement.textContent = "Today is " + today.toLocaleDateString("en-US", options);
 }
 
-/* ============ 3. Live Digital Clock ============ */
 function updateClock() {
   const clockElement = document.getElementById("live-clock");
   const now = new Date();
@@ -41,7 +33,7 @@ function updateClock() {
   const ampm = hours >= 12 ? "PM" : "AM";
 
   hours = hours % 12;
-  hours = hours ? hours : 12; // 0 should display as 12
+  hours = hours ? hours : 12; 
 
   minutes = minutes < 10 ? "0" + minutes : minutes;
   seconds = seconds < 10 ? "0" + seconds : seconds;
@@ -49,7 +41,6 @@ function updateClock() {
   clockElement.textContent = hours + ":" + minutes + ":" + seconds + " " + ampm;
 }
 
-/* ============ 4. Theme Changer (Light / Dark Mode) ============ */
 function toggleTheme() {
   document.body.classList.toggle("light-mode");
   const themeBtn = document.getElementById("theme-toggle-btn");
@@ -61,7 +52,6 @@ function toggleTheme() {
   }
 }
 
-/* ============ 5. Contact Form Validation ============ */
 function validateForm(event) {
   event.preventDefault();
 
@@ -82,10 +72,8 @@ function validateForm(event) {
 
   alert("✅ Thank you, " + name + "! Your message has been sent successfully.");
   document.getElementById("contact-form").reset();
-  return false; // keep on page instead of reloading (action="#")
-}
+  return false; 
 
-/* ============ 6. Button Click Counter ============ */
 let clickCount = 0;
 function incrementCounter() {
   clickCount++;
@@ -94,7 +82,6 @@ function incrementCounter() {
   counterDisplay.textContent = "Button clicked " + clickCount + " " + timesWord;
 }
 
-/* ============ Homework: Show/Hide About Me Section ============ */
 function toggleAbout() {
   const aboutText = document.getElementById("about-text");
   const toggleBtn = document.getElementById("about-toggle-btn");
@@ -108,7 +95,6 @@ function toggleAbout() {
   }
 }
 
-/* ============ Homework: Random Motivational Quote on Load ============ */
 function showRandomQuote() {
   const quotes = [
     "Code is like humor. When you have to explain it, it's bad. — Cory House",
