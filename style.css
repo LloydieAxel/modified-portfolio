@@ -1,6 +1,3 @@
-/* =========================================================
-   CUSTOM COLOR THEME & VARIABLES (Homework Requirement)
-   ========================================================= */
 :root {
     --bg-primary: #0f172a;      /* Dark navy background */
     --bg-card: #1e293b;         /* Container slate blue */
@@ -16,9 +13,6 @@
     --table-row-odd: rgba(15, 23, 42, 0.5);
 }
 
-/* =========================================================
-   LIGHT MODE THEME (JS Theme Switcher Requirement)
-   ========================================================= */
 body.light-mode {
     --bg-primary: #f1f5f9;
     --bg-card: #ffffff;
@@ -34,7 +28,6 @@ body.light-mode {
     --table-row-odd: rgba(248, 250, 252, 0.6);
 }
 
-/* Base Reset & Google Font Integration */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -54,9 +47,6 @@ body {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* =========================================================
-   1. NAVIGATION BAR (Desktop & Mobile Ready)
-   ========================================================= */
 .navbar {
     position: fixed;
     top: 0;
@@ -85,16 +75,14 @@ body {
     font-size: 0.95rem;
     padding: 8px 16px;
     border-radius: 6px;
-    transition: all 0.3s ease; /* Transition Effect */
+    transition: all 0.3s ease; 
 }
 
-/* Hover Effect #1 */
 .nav-links a:hover {
     color: var(--accent-primary);
     background-color: rgba(56, 189, 248, 0.1);
 }
 
-/* Theme Toggle Button (in navbar) */
 .nav-theme-btn {
     background: var(--accent-gradient);
     color: #0f172a;
@@ -113,9 +101,6 @@ body {
     transform: translateY(-2px);
 }
 
-/* =========================================================
-   CONTAINER & SECTIONS
-   ========================================================= */
 .portfolio-container {
     max-width: 900px;
     margin: 30px auto;
@@ -124,11 +109,10 @@ body {
     border-radius: 16px;
     border: 1px solid var(--border-color);
     box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
-    animation: fadeIn 1s ease-in-out; /* CSS Animation */
+    animation: fadeIn 1s ease-in-out; 
     transition: background-color 0.3s ease;
 }
 
-/* Keyframe Animation Requirement */
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(15px); }
     to { opacity: 1; transform: translateY(0); }
@@ -138,7 +122,6 @@ section {
     margin-bottom: 40px;
 }
 
-/* Headings */
 h1 {
     font-size: 2.2rem;
     font-weight: 700;
@@ -167,13 +150,10 @@ h2::before {
 }
 
 p {
-    text-align: justify; /* Text Justification Requirement */
+    text-align: justify;
     color: var(--text-muted);
 }
 
-/* =========================================================
-   2. HEADER SECTION
-   ========================================================= */
 header {
     display: flex;
     flex-direction: column;
@@ -184,7 +164,6 @@ header {
     margin-bottom: 35px;
 }
 
-/* Rounded, Center Image with Shadow */
 .profile-pic {
     width: 160px;
     height: 160px;
@@ -196,7 +175,6 @@ header {
     transition: transform 0.3s ease;
 }
 
-/* Hover Effect #2 */
 .profile-pic:hover {
     transform: scale(1.05);
 }
@@ -213,7 +191,6 @@ header {
     margin: 2px 0;
 }
 
-/* Live Date & Clock Box (JS Requirement) */
 .datetime-box {
     margin-top: 18px;
     padding: 12px 24px;
@@ -239,7 +216,6 @@ header {
     letter-spacing: 1px;
 }
 
-/* Motivational Quote Box (Homework Requirement) */
 .quote-box {
     margin-top: 14px;
     padding: 10px 20px;
@@ -253,9 +229,6 @@ header {
     color: var(--accent-secondary);
 }
 
-/* =========================================================
-   3. ABOUT ME SECTION
-   ========================================================= */
 .about-section {
     background-color: rgba(15, 23, 42, 0.4);
     padding: 25px;
@@ -263,7 +236,6 @@ header {
     border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-/* Small utility button (Show/Hide, etc.) */
 .small-btn {
     margin-top: 14px;
     background: transparent;
@@ -283,9 +255,6 @@ header {
     color: #0f172a;
 }
 
-/* =========================================================
-   4. EDUCATION TABLE
-   ========================================================= */
 .table-responsive {
     overflow-x: auto;
 }
@@ -311,7 +280,6 @@ th {
     border-bottom: 2px solid var(--border-color);
 }
 
-/* Alternate Row Colors */
 tbody tr:nth-child(even) td {
     background-color: var(--table-row-even);
 }
@@ -320,15 +288,11 @@ tbody tr:nth-child(odd) td {
     background-color: var(--table-row-odd);
 }
 
-/* Table Hover Effect */
 tbody tr:hover td {
     background-color: var(--bg-card-hover);
     color: var(--text-main);
 }
 
-/* =========================================================
-   5. SKILLS SECTION (3 Columns Default Desktop)
-   ========================================================= */
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* Desktop: 3 Columns */
@@ -345,7 +309,6 @@ tbody tr:hover td {
     transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
-/* Hover Effect #3 */
 .skill-card:hover {
     transform: translateY(-5px);
     border-color: var(--accent-primary);
@@ -363,9 +326,6 @@ tbody tr:hover td {
     color: var(--accent-secondary);
 }
 
-/* =========================================================
-   RESPONSIVE GALLERY (Now populated with images)
-   ========================================================= */
 .image-gallery {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -386,7 +346,6 @@ tbody tr:hover td {
     transform: scale(1.03);
 }
 
-/* Lists and External Links Styling */
 ol.learn-list {
     padding-left: 20px;
     color: var(--text-muted);
@@ -414,9 +373,6 @@ ul.links-list a:hover {
     color: var(--accent-primary);
 }
 
-/* =========================================================
-   BUTTON CLICK COUNTER (JS Requirement)
-   ========================================================= */
 #counter-section {
     text-align: center;
 }
@@ -446,9 +402,6 @@ ul.links-list a:hover {
     color: var(--accent-primary);
 }
 
-/* =========================================================
-   6. CONTACT FORM
-   ========================================================= */
 form {
     display: flex;
     flex-direction: column;
@@ -509,9 +462,6 @@ button[type="submit"]:hover {
     transform: translateY(-2px);
 }
 
-/* =========================================================
-   7. FOOTER
-   ========================================================= */
 footer {
     text-align: center;
     margin-top: 40px;
@@ -525,9 +475,6 @@ footer p {
     text-align: center;
 }
 
-/* =========================================================
-   CHALLENGE ACTIVITY: MEDIA QUERY (RESPONSIVE DESIGN)
-   ========================================================= */
 @media screen and (max-width: 768px) {
     body {
         padding-top: 220px; /* Account for stacked mobile menu */
